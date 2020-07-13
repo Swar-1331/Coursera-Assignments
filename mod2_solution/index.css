@@ -1,0 +1,82 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+}
+
+h1{
+	margin: 25px;
+	font-size: 1.75em;
+	text-align: center;
+}
+
+h2{
+	float: right;
+	text-align: center;
+	border: 1px solid black;
+	position: relative;
+	width: 80px;
+	font-size: 1.25em;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+body{
+	background-color: mediumslateblue;
+	font-family: arial, helvetica, sans-serif;
+}
+
+p{
+	padding-top: 10px; 
+}
+
+#i1{
+	background-color: cornsilk; 
+}
+#i2{
+	background-color: dodgerblue;
+}
+#i3{
+	background-color: silver;
+}
+#i4{
+	background-color: orange;
+}
+#i5{
+	background-color: mediumspringgreen;
+}
+#i6{
+	background-color: cyan;
+}
+
+.row{
+	width: 100%;
+}
+
+.box{
+	border: 1px solid black;
+	float: left;
+	padding: 0px 0px 10px 10px;
+	margin: 1.5%;
+	font-size: 1em;
+}
+/*		For Small Sized Devices		*/
+@media (max-width: 767px){
+	.col-sm{
+		width: 96.67%;
+	}
+}
+/*		For Medium Sized Devices		*/
+@media (min-width: 768px) and (max-width: 991px){
+	.col-md{
+		width: 46.67%;
+	}
+	.col-m{
+		width: 96.67%
+	}
+}
+/*		For Large Sized Devices		*/
+@media (min-width: 992px){
+	.col-lg{
+		width: 30%;
+	}
+}
