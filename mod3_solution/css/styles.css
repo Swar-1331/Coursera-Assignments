@@ -1,0 +1,161 @@
+body{
+	margin: 0;
+	font-family: arial, helvetica, sans-serif;
+	background-color: silver;
+}
+
+#hed1.logo{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10;
+	position: relative;
+}
+
+#hed1_2{
+	position: relative;
+	padding-top: 100px;
+}
+
+#hed2{
+	margin-top: 10px;
+	position: relative; 
+}
+
+span{
+	color: black;
+}	
+
+.header{
+	background-color: mediumslateblue;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.1);
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	outline: 1px solid black;
+}
+
+.header ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: white;
+}
+
+.header ul span{
+	display: block;
+	padding: 15px;
+	outline: 1px solid black;
+	text-decoration: none;
+}
+
+.header ul span:hover{
+	background-color: #ddd;
+}
+
+.header .logo{
+	float: left;
+	display: block;
+	font-size: 2em;
+	padding: 10px 20px;
+}
+
+.header .menu{
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+	text-align: center;
+}
+
+.header .menu-icon{
+	padding: 30px 20px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+	margin-top: 8px;
+}
+
+.header .menu-icon .nav-icon{
+	background: #333;
+	display: block;
+	height: 2px;
+	width: 18px;
+	position: relative;
+	transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+	background: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	top: 5px;
+}
+
+.header .menu-icon .nav-icon:after{
+	background: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	top: -5px;
+}
+
+.header .menu-btn{
+	display: none;
+}
+
+.header .menu-btn:checked ~ .menu{
+	max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+	background: transparent; 
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+	transform: rotate(-45deg);
+	top:0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+	transform: rotate(45deg);
+	top:0;
+}
+
+@media (min-width: 576px) {
+	.header li{
+		float: left;
+	}
+	.header li span{
+		padding: 20px 30px;
+	}
+	.header .menu{
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.header .menu-icon{
+		display: none;
+	}
+}
+
+
+.header li .sp{
+	padding: 30px 20px;
+	background-color: mediumslateblue;
+}
+
+section > div{
+	background: mediumspringgreen;
+}
+
+@media (min-width: 768px) {
+	.header ul span.sp{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
